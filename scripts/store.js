@@ -2,6 +2,14 @@
 /* global store, Item, cuid */
 
 const store = (function () {
+
+  const toggleCheckedFilter = function() {
+    this.hideCheckedItems = !this.hideCheckedItems;
+  }
+
+  const setSearchTerm = function(searchTerm) {
+    this.searchTerm = searchTerm;
+  }
   
   const findById = function(id) {
     console.log(id);
@@ -53,6 +61,8 @@ const store = (function () {
     findAndToggleCheck,
     findAndUpdateName,
     findAndDelete,
+    toggleCheckedFilter,
+    setSearchTerm
     
   };
 
